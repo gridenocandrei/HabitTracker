@@ -213,7 +213,7 @@ function addHabbit(event) {
     rerender(newId);
 }
 
-/* init */
+/* init1 */
 (async () => {
     await loadData();
     
