@@ -213,12 +213,12 @@ function addHabbit(event) {
     rerender(newId);
 }
 
-/* init1 */
+/* init */
 (async () => {
     await loadData();
     
     if (habbits.length === 0) {
-        console.warn('Список привычек пуст. Добавьте первую привычку через UI.');
+        console.warn('The habit list is empty. Add your first habit through the UI.');
         return;
     }
 
