@@ -1,0 +1,22 @@
+[
+
+{
+    "id": "1",
+    "icon": "Sport",
+    "name": "Push Ups",
+    "target": 10,
+    "days": [
+        { "comment": "The first attempt is always the hardest." },
+        { "comment": "Getting better every day!" }
+    ]
+},
+{
+    "id": "2",
+    "icon": "food",
+    "name": "Healthy Eating",
+    "target": 10,
+    "days": [
+        { "comment": "Nice!" }
+    ]
+}
+]

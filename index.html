@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habbit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap"
+rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class='app'>
+        <div class="panel">
+        <a href="/" rel="noopener noreferrer">
+            <img class="logo" src="./images/logo.svg" alt="Habbit Tracker Logo">
+        </a>
+        <nav class="menu">
+            <div class="menu__list"></div>
+                <button class="menu__add" onclick="togglePopup()">
+                    <img src="./images/Add.svg" alt="Add Habit Icon">
+                </button>
+        </nav>
+        </div>
+    <div class="content">
+        <header>    
+            <h1 class="h1">-</h1>
+            <div class="progress">
+                <div class="progress__text">
+                    <div class="progress__name">Progress</div>
+                    <div class="progress__percent">%</div>
+                </div>
+                <div class="progress__bar">
+                    <div class="progress__cover-bar"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+    <div id="days"></div>
+        <div class="habbit">
+                    <div class="habbit__day">Day _</div>
+                    <form class="habbit__form" onsubmit="addDays(event)">
+                    <input
+                    name="comment"
+                    class="input_icon" 
+                    type="text" 
+                    placeholder="Comment" 
+                    />
+                    <img 
+                    class="input__icon" 
+                    src="./images/comment.svg" 
+                    alt="Comment Icon" 
+                    />
+                    <button class="button" type="submit">Add</button>
+                    </form>
+            </div>
+            
+        </main>
+    </div>
+    <div class="cover cover_hidden" id="add-habbit-popup">
+        <div class="popup">
+                <button class="popup__close" onclick="togglePopup()">
+                    <img src="./images/Close.svg" alt="Close Popup">
+                </button>
+            <h2>New Habit</h2>
+            <div class="icon-label">Icon</div>
+            <div class="icon-select">
+                <button class="icon icon_active" onclick="setIcon(this, 'sport')">
+                    <img src="./images/sport.svg" alt="Sport">
+                </button>
+                                <button class="icon" onclick="setIcon(this, 'water')">
+                    <img src="./images/Water.svg" alt="Water">
+                </button>
+                                <button class="icon" onclick="setIcon(this, 'food')">
+                    <img src="./images/Food.svg" alt="Food">
+                </button>
+            </div>
+                            <form class="popup__form" onsubmit="addHabbit(event)">
+                    <input type="text" name="name" placeholder="Title"/>
+                    <input type="text" name="icon" hidden placeholder="Icon" value="sport"/>
+                    <input type="text" name="target" placeholder="Target"/>
+                    <button class="button" type="submit">Create</button>
+                </form>
+        </div>
+    </div>
+</div>
+<script src="./scripts/app.js"></script>
+</body>
+</html>
